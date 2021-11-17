@@ -16,6 +16,7 @@ mongoose.connect(`${process.env.MongodbServer}`, (err, then) => {
 });
 
 app.use(bodyParser());
+app.use(express.json());
 
 app.use("/", userRoutes);
 
